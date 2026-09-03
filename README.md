@@ -21,9 +21,4 @@ The main folders are organised as follows:
 ## Repository structure
 
 The repository is organised as follows:
-
-
-├── Model2.stan
-├── Model3.stan
-└── Model4.stan
-```
+<img width="823" height="708" alt="image" src="https://github.com/user-attachments/assets/6e457ad8-da64-4842-96a7-d418a79e3a9c" />
