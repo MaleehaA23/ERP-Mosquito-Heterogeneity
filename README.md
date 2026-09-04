@@ -78,12 +78,12 @@ Before running this analysis, download this repository and set the working direc
 getwd()
 list.files()
 ```
-If it has been set correctly, you should see the working directory end in /Models. The files should include the folders Data, ArabiensisNewResults, CulexNewResults, SimulationResults, and FiguresAndTables, together with the model and analysis scripts e.g (RunModel1.R).
+If it has been set correctly, you should see the working directory end in /Models. The files should include the folders ArabiensisNewResults, CulexNewResults, SimulationResults, and FiguresAndTables, together with the model and analysis scripts e.g (RunModel1.R).
 
 All scripts use paths relative to the Models directory. The repository structure should therefore be retained.
 
 ## Data
-The analyis uses experimental hut trial data for _Anopholes arabiensis_ and _Culex_ mosquitoes. Separate datasets are used for the control and intervention arms.
+The analyis uses experimental hut trial data for _Anopheles arabiensis_ and _Culex_ mosquitoes. Separate datasets are used for the control and intervention arms.
 The datasets are not included in this repository.
 
 Before running the analysis, create a folder named `Data` inside the main
@@ -121,7 +121,7 @@ Model4.stan
 ```
 These can be run in R using rstan. The corresponding R scripts (RunModelX.R) prepare the data, compile the relevant Stan model and perform posterior sampling. The saved fit is saved as an .rds file and the posterior CSV files are saved in the correct folder, e.g CulexNewResults/Model2 contains the Stan fit and posterior CSVs for the Model 2 fit on the _Culex_ dataset.
 
-The code supplied can be ran directly for the _An. arabiensis_ datasets. They must be changed manually for Culex. The R scripts are commented so it is clear which lines need to be changed. These lines change the datasets to the Culex datasets and change the species to Culex (to ensure outputs are saved to the correct folder.)
+The code supplied can be run directly for the _An. arabiensis_ datasets. They must be changed manually for Culex. The R scripts are commented so it is clear which lines need to be changed. These lines change the datasets to the Culex datasets and change the species to Culex (to ensure outputs are saved to the correct folder.)
 
 **Note:** For the Culex Model 4 fit max_treedepth must be changed to 15 and adapt_delta must be changed to 0.99. This is commented on the RunModel4.R code file.
 The fitted Stan objects are saved within the corresponding model folders. For example:
@@ -149,7 +149,7 @@ Model4ParameterRecoveryResults.rds
 ```
 These files can be used to reproduce the reported bias, RMSE, correlation and 95% credible interval coverage results without rerunning the full simulation study.
 
-**Warning:** The simulations were computationally expensive, especially for Models 3 and 4. I used a computational shared facility to run the code, as it took more than 12 hours. Take this into account before running the code. The saved .rds files can be used to reproduce all reported figures, and be used any new analysis.
+**Warning:** The simulations were computationally expensive, especially for Models 3 and 4. I used a computational shared facility to run the code, as it took more than 12 hours. Take this into account before running the code. The saved .rds files can be used to reproduce all reported figures, and be used for any new analysis.
 
 ## Reproducing figures and tables
 Scripts used to generate the reported analytical outputs are contained in FiguresAndTables/
@@ -182,7 +182,7 @@ true_vs_simulated_beta_kappa_correlation_figures.R
 Coverage_plot_code.R
     Produces the credible interval coverage figure
 ```
-**Note:** Coverage_plot_code.R uses the table output from TableA.1_ParamterRecovery.R. Therefore, it must be run after this. I have uploaded the table, so to reproduce the plot, you can run them in either order. But, if you wish to run all the code from the beginning, without using any saved files, then ensure the order is followed correctly.
+**Note:** Coverage_plot_code.R uses the output from TableA.1_ParameterRecovery.R. The required table has already been supplied, so Coverage_plot_code.R can be run directly. When reproducing the analysis entirely from scratch, run TableA.1_ParameterRecovery.R first.
 
 The scripts in FiguresAndTables/ use the supplied fitted-model and simulation .rds files as inputs.
 ## Computational Requirements
