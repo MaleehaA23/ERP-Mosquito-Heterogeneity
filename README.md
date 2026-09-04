@@ -89,7 +89,7 @@ Model2.stan
 Model3.stan
 Model4.stan
 ```
-These can be run in R using rstan. The corresponding R scripts (RunModelX.R) prepare the data, compile the relevant Stan model and perform posterior sampling. The saved fit is saved as an .rds file and the posterior csv files are saved in the correct folder, e.g CulexNewResults/Model2 contains the Stan fit and posterior csvs for the Model 2 fit on the _Culex_ dataset.
+These can be run in R using rstan. The corresponding R scripts (RunModelX.R) prepare the data, compile the relevant Stan model and perform posterior sampling. The saved fit is saved as an .rds file and the posterior CSV files are saved in the correct folder, e.g CulexNewResults/Model2 contains the Stan fit and posterior CSVs for the Model 2 fit on the _Culex_ dataset.
 
 The code supplied can be ran directly for the _An. arabiensis_ datasets. They must be changed manually for Culex. The R scripts are commented so it is clear which lines need to be changed. These lines change the datasets to the Culex datasets and change the species to Culex (to ensure outputs are saved to the correct folder.)
 
@@ -104,7 +104,7 @@ These fitted objects have also been supplied in the repository, allowing the rep
 ## Reproducing the simulation study
 Parameter recovery was investigated using 100 simulated datasets for each model.
 
-For each simulation, a posterior draw from the corresponding observed-data fit was selected and used as the true parameter values. The paramter values are taken from the saved csv files from the real-data fit to the _An .arabiensis_ data. Therefore, if you are running everything from scratch, ensure that you have run all 4 model fits for the _An. arabiensis_ datasets first. I have uploaded all posterior csvs to the correct folders already, so it is possible to reproduce the simulation study without rerunning the real-data model fits.
+For each simulation, a posterior draw from the corresponding observed-data fit was selected and used as the true parameter values. These parameter values are taken from the saved CSV files from the real-data fits to the An. arabiensis data. Therefore, if running everything from scratch, ensure that all four models have first been fitted to the An. arabiensis datasets. The required posterior CSV files have also been included in the corresponding folders used in the code, so the simulation study can be reproduced without rerunning the real-data model fits.
 
 A new dataset with the same experimental structure was then generated and the corresponding model was refitted.
 
