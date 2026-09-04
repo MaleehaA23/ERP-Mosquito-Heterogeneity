@@ -75,8 +75,12 @@ These datasets originate from [Fairbanks et al. (2026)](https://doi.org/10.64898
 The fitted Stan objects have been saved as .rds files for both the real-data and simulation analyses. Thus, the reported figures and table outputs remain reproducible using my code prior to the public release of the datasets.
 
 ## Reproduction workflow
-<img width="800" height="1120" alt="Blank diagram" src="https://github.com/user-attachments/assets/525c43a9-f4ca-4451-a1ef-369564bbe38c" />
+<img width="800" height="960" alt="Blank diagram (1)" src="https://github.com/user-attachments/assets/42250cd4-ec08-4995-a9f9-81451b7d8820" />
 
+
+The diagram shows the complete workflow to reproduce the results from my ERP.
+
+The black arrow corresponds to steps taken for both species. The diagram highlights that the simulation study is only done for the _An. arabiensis_ species and must take place after running its model fit. The real-data analysis takes place after running the model fits for both the _An. arabiensis_ species and _Culex_ species.
 ## Reproducing the observed-data analysis
 Models 1–4 are implemented in:
 ```
