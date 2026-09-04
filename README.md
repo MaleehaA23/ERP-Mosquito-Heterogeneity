@@ -22,7 +22,7 @@ The repository is organised as follows:
 <img width="794" height="693" alt="image" src="https://github.com/user-attachments/assets/337c94be-bf64-47ae-8a09-6e66dbdacc21" />
 
 
-ArabiensisNewResults and CulexNewResults contain the outputs from fitting Models 1–4 to the observed data. SimulationResults contains the saved results from the parameter-recovery simulations. FiguresAndTables contains the scripts used to generate the reported figures and tables. 
+ArabiensisNewResults and CulexNewResults contain the outputs from fitting Models 1–4 to the observed data. SimulationResults contains the saved results from the parameter-recovery simulations. FiguresAndTables contains the scripts used to generate the reported figures and tables. **You must create the Data folder within Models once you have the datasets and save them there.**
 
 ## Software requirements
 The analysis was conducted in R using Stan through the rstan package.
@@ -61,8 +61,15 @@ All scripts use paths relative to the Models directory. The repository structure
 
 ## Data
 The analyis uses experimental hut trial data for _Anopholes arabiensis_ and _Culex_ mosquitoes. Separate datasets are used for the control and intervention arms.
+The datasets are not included in this repository.
 
-The scripts expect the required datasets to be located in the Data folder with filenames:
+Before running the analysis, create a folder named `Data` inside the main
+`Models` folder:
+
+Models/Data/
+
+Place the required control and intervention datasets in this folder using
+the filenames specified below:
 ```
 arabiensis_cleanEH_BIT046_data0.csv
 arabiensis_cleanEH_BIT046_data1.csv
