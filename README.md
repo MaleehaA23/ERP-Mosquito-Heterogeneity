@@ -25,8 +25,7 @@ The repository is organised as follows:
 ArabiensisNewResults and CulexNewResults contain the outputs from fitting Models 1–4 to the observed data. SimulationResults contains the saved results from the parameter-recovery simulations. FiguresAndTables contains the scripts used to generate the reported figures and tables. **You must create the Data folder within Models once you have the datasets and save them there.**
 
 ## Software requirements
-The analysis was conducted in R using Stan through the rstan package.
-
+The analysis was conducted in R using RStudio, with Bayesian models fitted in Stan through the rstan package.
 The R packages required by the analysis include:
 ```
 library(rstan)
